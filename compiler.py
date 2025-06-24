@@ -1,5 +1,9 @@
+import re
 def compileLine(line):
-    return line
+    if re.match(r"(\d+)\s*?(\+|-|\*|\/|%)\s*(\d+)(\s*?(\+|-|\*|\/|%)\s*(\d+))*",line):
+        return str(eval(line))
+    else:
+        return line
 def compile(code):
     codeDict = {}
     python = ""
@@ -35,9 +39,3 @@ def compile(code):
         else:
             raise ValueError(f'The line with id "{currentLine["goto"]}" could not be found.')
     return python
-mallard =  """
-init||greet
-greet|Hello,|location
-location|World!|
-""".strip()
-print(compile(mallard))
