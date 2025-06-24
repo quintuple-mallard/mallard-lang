@@ -41,8 +41,15 @@
     button {
       background: crimson;
       border-radius: 2vmin;
-      border: 1vmin solid firebrick;
-      box-shadow: 1vmin 1vmin 1vmin black;
+      border:none;
+      box-sizing:borderbox;
+      width:50vmin;
+      height:5vmin;
+      box-shadow:1vmin 1vmin 1vmin black;
+    }
+    button:active {
+      box-shadow:0.2vmin 0.2vmin 0.2vmin 0.2vmin black inset;
+      border:none;
     }
   </style>
 </html>
