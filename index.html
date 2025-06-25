@@ -1,7 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-  <main>
-    <h1>The Mallard Programming language</h1>
+  
+    <section id="top-bar">
+      <div>Docs</div>
+      <div>Tour</div>
+      <div>Editor</div>
+    </section>
+    <main>
+    <h1>The Mallard Programming Language</h1>
     <div>
       Mallard is a programming language focused on <em>flow control</em>.
     </div>
@@ -13,21 +19,32 @@
       Download the compiler
     </button>
     </a>
-    <div>
+    <div id="license">
         Mallard is licensed under a <a href="https://github.com/quintuple-mallard/mallard-lang/blob/main/LICENSE">GPL 3.0</a> open source license.
-      </div>
+     </div>
   </main>
   <style>
     main {
       background: navy;
       height:100vh;
+      width:100vw
       display: flex;
       padding:10vmin;
       flex-direction:column;
-      gap:3vmin
+      button,& > * + * {
+      margin-bottom:4vh;
+    };
     }
-    * + * {
-      margin-bottom:2vh;
+    #top-bar {
+      background: red;
+      height:20vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      & > * {
+        flex-grow: 1;
+        text-align:center
+      }
     }
     * {
       color: #eeeeee;
@@ -53,6 +70,9 @@
     button:active {
       box-shadow:0.2vmin 0.2vmin 0.2vmin 0.2vmin black inset;
       border:none;
+    }
+    #license {
+      font-size: 90%
     }
   </style>
 </html>
